@@ -30,8 +30,14 @@ class Student{
 }
 
 class Classroom{
-        Student[] student;
+        Student[] student = new Student[10];
+        int counter = 0;
 
+        void addNewStudent(String name){
+            if (counter < 10 - 1){
+                student[counter] = name;    
+            }
+        }
 }
 
 class App{
