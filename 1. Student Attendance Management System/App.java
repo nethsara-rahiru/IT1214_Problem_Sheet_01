@@ -70,7 +70,9 @@ class Classroom{
             
             for (int i = 0; i < studentLimit; i++){
                 if(student[i] == null){
+                    System.out.println("");
                     System.out.println("null");
+                    System.out.println("------------------------------");
                 }
                 else{
                     System.out.println("");
@@ -81,6 +83,7 @@ class Classroom{
                     System.out.print("Days  : ");
                     System.out.println(student[i].getDaysAttended());
                     System.out.println("");
+                    System.out.println("------------------------------");
                 }
             }
         }
@@ -105,7 +108,7 @@ class Classroom{
                     student[i].setName(stdName);
                     student[i].setDaysAttended(doa);
                     System.out.println("Data saved in posistion " + i );
-                    
+                    break;
                 }
             }
         }
@@ -113,7 +116,10 @@ class Classroom{
 
 class App{
     public static void main(String[] args){
+
             int system = 1;
+            Classroom classroom = new Classroom();
+
 
             while(system == 1){
             System.out.println("---------------------------------------------");
@@ -128,7 +134,6 @@ class App{
             System.out.println("");
 
             Scanner scan = new Scanner(System.in);
-            Classroom classroom = new Classroom();
 
             String input = scan.nextLine();
             switch (input) {
